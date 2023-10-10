@@ -63,7 +63,7 @@ std::vector<int> convertCharStringToIntArray(const std::string* charString) {
   std::vector<int> intArray;
   
   for (int i = 0; i < charString->length(); i++) {
-    intArray.insert(intArray.end(), (int)charString->at(i));
+    intArray.insert(intArray.end(), static_cast<int>(charString->at(i)));
   }
 
   return intArray;
