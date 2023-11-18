@@ -10,7 +10,7 @@
 
 ///Note to self2:
 ///  this is the least I had to change from part1 to part2 (added a
-///  '1' to line 20) and I doubt this is gonna change
+///  '1' to lines 20 and 28) and I doubt this is gonna change
 
 int main() {
   //Initial declaration
@@ -25,7 +25,7 @@ int main() {
   //Iterate over the string
   int pos = 0;
   for (; pos < inputString.size() - markerSize; pos++) {
-    //Looking at 4 characters at a time
+    //Looking at 14 characters at a time
     std::string substr = inputString.substr(pos, markerSize);
 
     //Pass them to a set
