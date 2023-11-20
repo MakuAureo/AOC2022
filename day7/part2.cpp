@@ -85,7 +85,7 @@ int main() {
   }
 
   //Output result
-  std::cout << '\n' << root.findSmallestDirectorySizeToDelete(30000000) << std::endl;
+  std::cout << root.findSmallestDirectorySizeToDelete(30000000) << std::endl;
 
   return 0;
 }

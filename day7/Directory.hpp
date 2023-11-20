@@ -32,7 +32,7 @@ private:
     memorySize = 0;
     for (file* it = files; it < files + fileCount; it++) { memorySize += (*it).size; }
     for (Directory** it = directories; it < directories + directoryCount; it++) { memorySize += (**it).memorySize; }
-    if (parentDirectory) { this->parentDirectory->updateSize(); }
+    if (parentDirectory) { parentDirectory->updateSize(); }
   }
 
   //Directory search: return a pointer to directory named 'dirName' whithin current directory, if no such directory exists return nullptr
