@@ -22,9 +22,9 @@ int main() {
   while (input.tellg() < inputLength) {
     std::getline(input, string);
     //Get sum
-    if (string.length()) currentSum += std::stoi(string);
+    if (!string.empty()) { currentSum += std::stoi(string); }
     //Update sumList
-    if (!string.length()) {
+    else {
       sumList.push_back(currentSum);
       currentSum = 0;
     }
@@ -34,7 +34,8 @@ int main() {
   sumList = sortIntList(sumList);
 
   //Print 3 biggest elements
-  std::cout << *(sumList.end() - 1) << ' ' << *(sumList.end() - 2) << ' ' << *(sumList.end() - 3) << std::endl;
+  for (std::vector<int>::reverse_iterator it = sumList.rend(); it != sumList.rbegin() - 3; it++) { std::cout << *it << '\n'; }
+  std::cout << std::endl;
 
   return 0;
 }

@@ -18,9 +18,9 @@ int main() {
   while (input.tellg() < inputLength) {
     std::getline(input, string);
     //Get sum
-    if (string.length()) { currentSum += std::stoi(string); }
+    if (!string.empty()) { currentSum += std::stoi(string); }
     //Update currentSum and biggestElement
-    else if (!string.length()) {
+    else {
       if (currentSum > biggestElement) biggestElement = currentSum;
       currentSum = 0;
     }
